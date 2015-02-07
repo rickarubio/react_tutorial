@@ -5,7 +5,10 @@ var CommentBox = React.createClass({
       React.createElement(
         'div',
         { className: 'commentBox' },
-        'Hello world! Behold. I am the comment box!'
+        'Hello world! Behold. I am the comment box!',
+        React.createElement('h1', null, 'Comments'),
+        React.createElement(CommentList, null),
+        React.createElement(CommentForm, null)
       )
     );
   }
