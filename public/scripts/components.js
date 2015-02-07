@@ -11,6 +11,19 @@ var CommentBox = React.createClass({
   }
 });
 
+var CommentList = React.createClass({
+  displayName: 'CommentList',
+  render: function() {
+    return (
+      React.createElement(
+        'div',
+        { className: 'commentList' },
+        'Hola Mundo yo soy un comment list!'
+      )
+    );
+  }
+});
+
 var CommentForm = React.createClass({
   render: function() {
     return (
