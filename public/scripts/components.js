@@ -25,6 +25,7 @@ var CommentList = React.createClass({
 });
 
 var CommentForm = React.createClass({
+  displayName: 'CommentForm',
   render: function() {
     return (
       React.createElement(
