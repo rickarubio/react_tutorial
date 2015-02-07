@@ -1,3 +1,5 @@
+var converter = new Showdown.converter();
+
 var CommentBox = React.createClass({
   displayName: 'CommentBox',
   render: function() {
@@ -30,7 +32,7 @@ var CommentList = React.createClass({
         React.createElement(
           Comment,
           { author: 'Jordan Walke' },
-          'This is another comment'
+          'This is *another* comment'
         )
       )
     );
@@ -40,6 +42,7 @@ var CommentList = React.createClass({
 var Comment = React.createClass({
   displayName: 'Comment',
   render: function() {
+    var rawMarkup = converter.makeHtml(this.props.children.toString());
     return (
       React.createElement(
         'div',
@@ -49,7 +52,13 @@ var Comment = React.createClass({
           { className: 'commentAuthor' },
           this.props.author
         ),
-        this.props.children
+        React.createElement(
+          'span',
+          { dangerouslySetInnerHTML:
+            {
+              __html: rawMarkup
+            }
+          })
       )
     );
   }
