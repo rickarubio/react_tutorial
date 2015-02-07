@@ -10,3 +10,14 @@ https://github.com/reactjs/react-tutorial/
 2. ```cd``` into this repo
 3. Type ```node server.js```
 4. Visit [http://localhost:3000](http://localhost:3000)
+
+## Observations
+I thought at first that it wouldn't be much of an issue to
+use regular JS syntax instead of JSX syntax.  
+  
+Unfortunately, most of the React documentation is in JSX syntax.  
+  
+I used the online JSX compiler to understand the JSX syntax
+http://facebook.github.io/react/jsx-compiler.html  
+  
+In hindsight, just use the JSX syntax if like me, you're learning React.
